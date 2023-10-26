@@ -1,0 +1,23 @@
+header > p {
+    color: #157575;
+
+}
+
+#sublogo {
+    background-color: #fdfbf1;
+    color: #157575; 
+    border-top-style: solid;
+    border-color: #ffd877;
+}
+
+#subimg {
+    color: grey;
+}
+
+#featured {
+    color: red;
+}
+
+a {
+    color: #157575;
+}
