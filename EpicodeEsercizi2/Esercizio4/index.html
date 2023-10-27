@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/274a9c227c.js" crossorigin="anonymous"></script> 
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <title>Titolo</title>
+  </head>
+  <body>
+    <header>
+     <img src="assets/img/logo.svg">
+      <nav>
+        <p>EPICODE - IL BLOG DEI DEVELOPERS</p>
+        <ul>
+          <li><i class="fa-solid fa-arrow-right"></i> Home <i class="fa-solid fa-arrow-left"></i></li>
+          <li><i class="fa-solid fa-arrow-right"></i>Articoli <i class="fa-solid fa-arrow-left"></i></li>
+          <li><i class="fa-solid fa-arrow-right"></i>Lavora con noi <i class="fa-solid fa-arrow-left"></i></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Come creare un template per i post</h1>
+      <h3><i class="fa-solid fa-pen-to-square"></i> di Mario Rossi - <i class="fa-regular fa-clock"></i> pubblicato il 25-10-2020</h3>
+      <p>La prima cosa da fare è suddividere in blocchi logici la pagina, identificando le <b>parti comuni</b> da applicare a tutte le pagine</p>
+      <br>
+      <p>Le varie aree saranno quindi suddivise in:</p>
+      <br>
+      <ul>
+        <li>Contenuti di intestazione del tag <kbd>&lt;header&gt;</kbd></li>
+        <li>Contenuti centrali variabili dei tag <kbd>&lt;main&gt;</kbd></li>
+        <li>Contenuti di fine pagina comuni, da inserire nel tag <kbd>&lt;footer&gt;</kbd></li>
+      </ul>
+      <h2>Formattazione del codice</h2>
+      <p>Il testo dell'articolo dovrà essere formattato per identificare tutte le parti da <b>selezionare con i CSS</b>. Perciò i passi saranno:</p>
+       <ol>
+        <li>Progettare su carta il markup finale, assegnando ad ogni specifico testo il tag appropriato.</li>
+        <li>Scrivere l'HTML dai tag esterni a quelli interni e dall'alto verso il basso.</li>
+        <li>Applicare gli stili CSS.</li>
+       </ol>
+       <p>L'applicazione di stili CSS è cresciuta negli anni fino a raggiungere la diffusione pressocché totale.</p>
+       <table>
+        <caption>Diffusione dei CSS</caption>
+        <thead>
+          <tr>
+            <th>Anno</th>
+            <th>% di Utilizzo</th>
+            <th>Supporto Browsers</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>2000</th>
+            <th>20%</th>
+            <th>17%</th>
+          </tr>
+          <tr>
+            <th>2002</th>
+            <th>35%</th>
+            <th>22%</th>
+          </tr>
+          <tr>
+            <th>2004</th>
+            <th>45%</th>
+            <th>42%</th>
+          </tr>
+          <tr>
+            <th>2008</th>
+            <th>80%</th>
+            <th>51%</th>
+          </tr>
+          <tr>
+            <th>2012</th>
+            <th>100%</th>
+            <th>76%</th>
+          </tr>
+        </tbody>
+       </table>
+       <p>Un test di validazione potrà essere fatto tramite il <a href="#">tool online</a> dedicato allo scopo. Una volta ottimizzato il tutto, avremo raggiunto il nostro obiettivo ed essere stati dei veri developers come loro: </p>
+       <video controls>
+        <source src="assets/img/Arakno2100.mp4" type="video/mp4" >
+       </video>
+       <article id="form">
+        <h3>NOVITA'</h3>
+        <p>Vuoi rimanere aggiornato su altre novità sul nostro blog? Iscrivi alla nostra Newsletter:</p>
+        <label for="email">
+        <input type="email" id="email" name="email" placeholder="inserire e-mail valida">
+        <button type="submit" id="Iscriviti" name="Iscrivi">Invia</button>
+      </label>
+       </article>
+       <h3 id="articoli">ARTICOLI CORRELATI</h3>
+       <article>
+        <a href="#" id="primoa">Validare il codice HTML</a>
+        <a href="#" id="secondoa"><i class="fa-solid fa-tag"></i> Categoria: develop</a>
+        <h5><i class="fa-solid fa-calendar-days"></i> Data: 18-9-2020</h5>
+       </article>
+       <article>
+        <a href="#" id="primoa">Correggere la sintassi</a>
+        <a href="#" id="secondoa"><i class="fa-solid fa-tag"></i> Categoria: develop</a>
+        <h5><i class="fa-solid fa-calendar-days"></i> Data: 16-9-2020</h5>
+       </article>
+       <article>
+        <a href="#" id="primoa">Meno Kb nella pagina</a>
+        <a href="#" id="secondoa"><i class="fa-solid fa-tag"></i> Categoria: ottimizzazione</a>
+        <h5><i class="fa-solid fa-calendar-days"></i> Data: 30-09-2020</h5>
+       </article>
+    </main>
+    <footer>
+      <h3>Blog Epicode &copy;2021</h3>
+      <p>Testa online di Mario Rossi, registrato con prot. n.213/2018 - Via Luigi Einaudi 2 - Milano. P.IVA 00112233. <a href="mailto:info@epicode.school">info@epicode.school</a></p>
+    </footer>
+  </body>
+</html>
