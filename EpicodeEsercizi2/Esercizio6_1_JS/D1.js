@@ -86,6 +86,6 @@ let name1 = "john";
 let name2 = "John";
 let name3 = name2.toLowerCase();
 
-console.log(name1 == name2);
-console.log(name1 === name2);
-console.log(name1 === name3);
+console.log("Comparazione Uguaglianza (==): "name1 == name2);
+console.log("Comparazione Uguaglianza (===): "name1 === name2);
+console.log("Comparazione Uguaglianza (Lowercase): "name1 === name3);
