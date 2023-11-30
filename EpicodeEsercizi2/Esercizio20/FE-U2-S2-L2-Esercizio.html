@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Abbiamo bisogno di un sito web per un'agenzia di viaggi!
+
+In questa pagina aggiungerai destinazioni di posti che sogni di visitare in futuro.
+
+Il progetto non richiede alcuna customizzazione di CSS, dovrai crearlo interamente usando le classi di bootstrap, sia per quello che riguarda il layout che lo stile.
+
+
+Testa frequentemente il tuo lavoro nelle 3 principali risoluzioni (mobile, tablet, desktop) usando i developer tools del browser nella sezione emulazione device, per una maggiore precisione.
+
+Inizia utilizzando i componenti esistenti di Bootstrap 5 per creare la tua pagina (modificali all'occorrenza utilizzando le utility classes di bootstrap: colori, spazi, margini, dimensioni etc...)
+Usa container > row > col-* in questo ordine per ottenere un layout responsive perfetto.
+
+Esercizi:
+
+1) Implementa una navbar con questi elementi di menu:
+Home
+Saldi
+Welcome Summer
+Last Minute
+Recensioni
+
+Collegherai ogni sezione della pagina agli elementi del menu corrispondenti. 
+
+2) Aggiungi un logo alla navbar, un qualsiasi logo di agenzia di viaggi, anche inventata.
+
+3) Aggiungi una sezione introduttiva con il nome, il payoff dell'agenzia, 
+una breve descrizione in corsivo e una call-to-action (bottone) "Prenota ora" di colore azzurro chiaro e testo bianco e grassetto
+
+Il background della sezione sarà grigio chiaro e con bordi arrotondati e del padding generoso all'interno
+
+4) Implementa la sezione "Saldi". Qui mostrerai 4 destinazioni.
+
+In questa sezione dovranno esserci:
+
+4 card per destinazioni per linea a schermo grande - desktop (quattro sulla stessa linea)
+3 card per destinazioni per linea a schermo medio  - tablet  (una dovrà scomparire)
+2 card per destinazioni per linea a schermo piccolo - mobile (due per linea)
+
+le card avranno un bordo di 2px azzurro chiaro, il bottone azzurro chiaro e testo default
+
+5) Implementa la sezione "Welcome Summer". Qui mostrerai 6 destinazioni al tuo utente. (nessun bordo, ma stesso stile dei bottoni precedenti)
+
+In questa sezione dovranno esserci:
+
+6 card per destinazioni per linea a schermo extra large
+3 card per destinazioni per linea a schermo grande (desktop)
+2 card per destinazioni per linea a schermo medio (tablet)
+2 card per destinazioni per linea a schermo piccolo (mobile)
+
+6) Implementa la sezione "Offerta del giorno". Qui avrai:
+
+66% dello spazio dedicato all'immagine del luogo di destinazione
+33% dedicato al nome, date, prezzo e un badge con "best offer" come testo
+
+l'immagine avrà i bordi arrotondati e un'ombra leggera
+per il contenuto: il nome dovrà essere più grande del resto,
+le date dovranno essere formattate con font "monospace",
+il prezzo dovrà essere definito come "lead"
+e il badge sarà scuro
+
+
+7) Rendi invisibile la sezione "Offerta del giorno" su schermi piccoli.
+
+8) Aggiungi nella sezione "Welcome Summer" un'ombra grande ad ogni card.
+
+9) Crea una sezione "Last Minute", in cui mostrerai 6 immagini delle destinazioni last minute come rettangoli ombreggiati dai bordi arrotondati, senza testo. Rendile responsive come preferisci!
+
+10) Crea una sezione "Recensioni", dove l'utente potrà trovare alcuni feedback da utenti fittizi. 
+Piccola immagine tonda a sinistra con bordo 2px azzurro, nome utente e recensione a destra
+
+11) Crea un footer con le informazioni dell'agenzia e un bottone "Contattaci".
+
+
+
+EXTRAS
+
+12) Crea un bottone vicino ad ogni sezione per collassarla e riaprirla se premuto.
+
+13) Crea la possibilità di contare il numero di "viaggi" presenti sulla pagina e visualizzare il risultato in un alert.
+
+14) Crea un modale con un campo email e un messaggio.
+
+15) Quando l'utente cliccherà su "Contattaci", il modale dovrà essere visualizzato.
+
+16) Crea una funzione che aggiunga un badge con la scritta "HOT" su ognuna delle offerte "Welcome Summer" posizionato in alto a destra.
+
+17) Crea una funzione che rimuova tutte le "card" dalla pagina
+
+-->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#"><a class="navbar-brand" href="#"><img
+                        src="https://seeklogo.com/images/E/Evelin_R_travel_agency-logo-8B607D6C80-seeklogo.com.png"
+                        width="100" alt=""></a></a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Saldi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Welcome Summer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Last Minute</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Recensioni</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-danger" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container">
+
+    <body>
+        <div class="container border border-2 mt-5 p-5">
+            <h1 class="text-secondary fw-light">Eveline-R <span class="fw-lighter align-middle"></span>
+                <span class="fs-6 position-absolute my-3">&mdash; Feel the Freedom</span>
+            </h1>
+            <hr>
+            <p class="fst-italic fs-4 text-secondary">Scopri le destinazioni più calde del momento!</p>
+            <button type="button" class="btn bg-info text-light mt">Prenota Ora</button>
+        </div>
+        <div class="container mt-5 p-5">
+
+                <div class="accordion-item">
+                    <div class="container d-flex justify-content-between mb-3">
+                      <p class="h4">Saldi</p>
+                      <p class="accordion-header text-info">
+                        <button
+                          class="accordion-button"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          Nascondi sezione
+                        </button>
+                      </p>
+                    </div>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+                        <div class="col">
+                          <div class="card h-100 border border-info border-2">
+                            <img src="assets/img/extreme-wow-ocean-escape.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Titolo</h5>
+                              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque architecto repellat ex molestias, illum, consequuntur odit hic earum soluta delectus consectetur molestiae natus inventore modi! Quis sunt minus quae est!</p>
+                              <button type="button" class="btn btn-primary">Prenota</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border border-info border-2">
+                            <img src="assets/img/extreme-wow-ocean-escape.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Titolo</h5>
+                              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam numquam corporis, labore, tempore id iste ad eos nostrum quasi obcaecati provident libero laboriosam tempora commodi reiciendis hic, enim necessitatibus cumque?</p>
+                              <button type="button" class="btn btn-primary">Primary</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border border-info border-2">
+                            <img src="assets/img/extreme-wow-ocean-escape.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Titolo</h5>
+                              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet delectus sapiente eligendi ipsa! Ullam, alias? Repellat repudiandae maxime quaerat provident temporibus odio ab ipsa itaque natus animi totam, tempora quidem!</p>
+                              <button type="button" class="btn btn-primary">Primary</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100 border border-info border-2">
+                            <img src="assets/img/extreme-wow-ocean-escape.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Titolo</h5>
+                              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nulla iure id. Quisquam laboriosam ipsam voluptas ratione, nulla illum odit neque eaque at quidem a, modi autem aperiam possimus eligendi!</p>
+                              <button type="button" class="btn btn-primary">Primary</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item mt-5">
+            <div class="container d-flex justify-content-between mb-3">
+              <p class="h4">Welcome Summer</p>
+              <p class="accordion-header text-info">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="true"
+                  aria-controls="collapseTwo"
+                >
+                  Nascondi sezione
+                </button>
+              </p>
+            </div>
+            <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                      <div class="card">
+                        <img src="assets/img/extreme-wow-ocean-escape.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Titolo</h5>
+                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad in assumenda maxime? Minus molestias animi incidunt pariatur quas deleniti iusto suscipit doloremque quidem, inventore labore et temporibus, eveniet nostrum eaque.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img src="assets/img/extreme-wow-ocean-escape.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Titolo</h5>
+                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium consequatur, dignissimos modi quis voluptatem temporibus explicabo. Sed consectetur quas a maxime obcaecati dolor ullam, rem doloribus earum perferendis expedita cum.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img src="assets/img/extreme-wow-ocean-escape.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Titolo</h5>
+                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolorum aliquid cum facilis? Molestiae hic harum quas consectetur reprehenderit voluptate. Eaque minus labore quod tempora nostrum assumenda mollitia at minima.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                          <img src="assets/img/extreme-wow-ocean-escape.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Titolo</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nihil, similique praesentium repellendus officia cum saepe dolores aut molestias eligendi inventore, eius qui recusandae mollitia libero ratione doloribus distinctio aliquam!</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card">
+                          <img src="assets/img/extreme-wow-ocean-escape.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Titolo</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio necessitatibus libero nisi voluptatum itaque vitae accusantium quos consectetur! Repellendus possimus ipsa fugit quasi, corporis dignissimos temporibus magni asperiores odit eaque.</p>
+                          </div>
+                        </div>
+                      </div>
+                    <div class="col">
+                      <div class="card">
+                        <img src="assets/img/extreme-wow-ocean-escape.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Titole</h5>
+                          <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, laudantium aliquam, nostrum ea cum ducimus quidem mollitia eius ab nobis accusantium eaque repellendus quos dolorum? Placeat asperiores dolor aliquam iste!</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="container d-flex justify-content-between mb-3 mt-5">
+                <p class="h4">Last Minute</p>
+            </div>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/img/extreme-wow-ocean-escape.jpg" class="d-block w-70" alt="...">
+                  </div>
+                </div>
+              </div>
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+    </body>
+</div>
+
+</html>
